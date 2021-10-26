@@ -30,7 +30,7 @@ namespace homework5._2
                 + str.Substring(6, 1)
                 + str.Substring(2, 3);
 
-            Console.WriteLine(resalt);
+            Console.WriteLine(resalt); // у resAlt специально сменил букву, тк надо было поменять переменную
             Console.ReadKey();
 
         }
