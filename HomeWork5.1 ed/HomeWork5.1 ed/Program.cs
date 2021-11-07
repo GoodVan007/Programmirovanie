@@ -11,8 +11,9 @@ namespace HomeWork5._1_ed
         static void Main(string[] args)
         {
             Console.WriteLine("write Eng. text");
-
-            string text = Console.ReadLine();
+            
+            string text = Console.ReadLine().ToLower();
+            
             text = text.Replace("a", "4");
             text = text.Replace("e", "3");
             text = text.Replace("i", "!");
