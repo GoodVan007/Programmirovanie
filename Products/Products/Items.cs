@@ -13,19 +13,23 @@ namespace Commodity
         public readonly string ItemNumber; // артикул
         public string ProductName; // наименование
         public string WholesalePrise; // оптовая цена товара
-        public string RetailPrice; // розничная цена товара
-        public int NumberOfGoods; // Количество товара на складе
-        public readonly Goods Type;
+        public string RetailPrise; // розничная цена товара
+        public string NumberOfGoods; // Количество товара на складе
+        public readonly GoodsType Type;
 
-        public Items(string item, string product, string wholesale, string retail, Goods type)
+        public Items(string item, string product, string wholesale, string retail, string numb, GoodsType type)
         {
             ItemNumber = item;
             ProductName = product;
             WholesalePrise = wholesale;
-            RetailPrice = retail;
+            RetailPrise = retail;
             Type = type;
+            NumberOfGoods = numb;
             
         }
+
+        
+
         public override string ToString()
         {
             return $"{ProductName} {ItemNumber}";
@@ -37,22 +41,25 @@ namespace Commodity
             var type = "";
             switch (Type)
             {
-                case Goods.Kilo:
+                case GoodsType.Kilo:
                     type = "Килограмм";
                     break;
-                case Goods.Pack:
+                case GoodsType.Pack:
                     type = "Упаковок";
                     break;
-                case Goods.ton:
+                case GoodsType.ton:
                     type = "Тонн";
                     break;
 
             }
 
             Console.WriteLine($"Наименование товара: {ProductName}. Артикул: {ItemNumber}. Количество Товара{NumberOfGoods}{type}" +
-                $" \nОптовая цена Товара: {WholesalePrise}. \nРозничная цена товара{RetailPrice}");
+                $" \nОптовая цена Товара: {WholesalePrise}. \nРозничная цена товара{RetailPrise}");
         }
 
     }
-    
+    // в Файле тестов 33 и 35 строчки выдают ошибку "CS0118", никак не могу ее исправить
+    // и из-за этого не могу запустить тесты
+    // "Ошибка CS0118 "Commodiry" является пространство имен, но используется как тип"
+    // Все делал по Примеру задания
 }

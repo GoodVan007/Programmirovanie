@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Commodity
 {
-    public enum Goods
+    public enum GoodsType
     {
         Pack,
         Kilo,
