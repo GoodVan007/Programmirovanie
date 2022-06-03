@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Products
+{
+    class DimensionalGoods
+    {
+        //габаритный товар
+        //длина, ширина, высота
+
+    }
+}
